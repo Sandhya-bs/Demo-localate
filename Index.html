@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="NavBar.css">
+        <title>Localate</title>
+        <script>
+            function passValue(){
+                var name=document.getElementById("name").value;
+                var des=document.getElementById("description").value;
+    
+                localStorage.setItem("projectName",name)
+                localDescription.setItem("projectDescription",des)
+                // return false;
+
+            }
+        </script>
+    </head>
+    <body>
+        <div class="topnav">
+            <h1 style="color:white; background-color: turquoise; margin:0%">Localate</h1>
+            <a class="active" href="./NavBar.html" style="padding:0%,0%">Home</a>
+            <h2>
+                Projects
+                <span>
+                    <button class="button">
+                        <a href="./Index.html" class="link" style="padding-bottom: 2%;padding-top: 2%;"> + Add Project</a>
+                    </button>
+                </span>
+            </h2>
+        </div>
+        
+        <form class="form" action="projectList.html">
+            <h2 style="color: white; padding-bottom: 30px ;text-align: center">New Project</h2>
+            <div style="text-align: center">
+                <label class="text" >Project Name</label>
+            </div>
+            <div style="text-align: center">
+                <input type="text" id="name" required></input>
+            </div>
+            <br />
+            <div style="text-align: center">
+                <label class="textarea">Description</label>
+            </div>
+            <div style="text-align: center">
+                <textarea id="description" required></textarea>
+            </div>
+            <br />
+            <button class="button" style="text-align: right"><a href="./Home.html" style="text-align: right">
+                    Cancel</a></button>
+            <input class="button" type="submit" value="Save Project" onclick="passValue();"/>
+        </form>
+    </body>
+</html>
